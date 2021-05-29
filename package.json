@@ -1,0 +1,28 @@
+{
+  "name": "osu-dreamteam-bot",
+  "version": "1.0.0",
+  "description": "osu!dreamteam bot",
+  "main": "main.js",
+  "dependencies": {
+    "cjs": "^0.0.11",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "opusscript": "^0.0.8",
+    "pnpm": "^6.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "ping"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nanami02/osu-dreamteam-bot.git"
+  },
+  "author": "Nanami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nanami02/osu-dreamteam-bot/issues"
+  },
+  "homepage": "https://github.com/Nanami02/osu-dreamteam-bot#readme"
+}
