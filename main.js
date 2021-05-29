@@ -8,15 +8,6 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-//command handler
-
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
-
-    client.commands.set(command.name, command);
-}
-
 //token
 
 client.login ('ODQ4MjMyMTc2MTg5NTcxMDky.YLJnxg.Akr9HDdtAcR4Srs5naFhZmlP-Gs');
@@ -27,7 +18,16 @@ client.once('ready', () => {
     console.log('Bot is online!');
 });
 
-//Commands
+//command handler
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    client.commands.set(command.name, command);
+}
+
+//commands
 
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -38,7 +38,21 @@ client.on('message', message =>{
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
         
-    } else if (command == 'youtube'){
+    } else if (command === 'rulesde'){
+        client.commands.get('rulesde').execute(message, args, Discord);
 
+    } else if (command === 'rulesen'){
+        client.commands.get('rulesen').execute(message, args, Discord);
+
+    } else if (command === 'say'){
+        client.commands.get('say').execute(message, args);
+
+    } else if (command === 'play') {
+        client.commands.get('play').execute(message, args);
+
+    } else if (command === 'leave'){
+        client.commands.get('leave').execute(message,args);
+        
     }
+
 });

@@ -4,12 +4,17 @@
   "description": "osu!dreamteam bot",
   "main": "main.js",
   "dependencies": {
+    "@discordjs/opus": "^0.5.0",
     "cjs": "^0.0.11",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.3.0",
     "opusscript": "^0.0.8",
-    "pnpm": "^6.4.0"
+    "pnpm": "^6.4.0",
+    "yt-search": "^2.8.0",
+    "ytdl-core": "^4.8.2"
   },
   "devDependencies": {},
   "scripts": {
