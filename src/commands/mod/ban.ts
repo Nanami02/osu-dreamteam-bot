@@ -25,7 +25,7 @@ export default class banCommand extends Command {
     if(member){
         const memberTarget = message.guild.members.cache.get(member.id)
         await memberTarget?.ban();
-        return message.channel.send('User has been kicked');
+        return message.channel.send('User has been banned');
         }
   }
 };
