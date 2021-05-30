@@ -18,7 +18,7 @@ client.registry
   .registerCommandsIn({filter: /^([^.].*)\.(js|ts)$/, dirname: path.join(__dirname, "commands")});
 
 client.once("ready", () => {
-    console.log(`Logged in as ${client.user?.tag}!`);
+    console.log(`Logged in as ${client.user?.tag}!!`);
 });
 
 client.login();
