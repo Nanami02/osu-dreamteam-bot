@@ -8,6 +8,7 @@ export default class banCommand extends Command {
       group: "mod",
       memberName: "ban",
       description: "Ban a specific member from the server",
+      userPermissions: ["BAN_MEMBERS"],
       args: [
         {
             key: 'text', // args.text

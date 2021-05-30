@@ -8,6 +8,7 @@ export default class kickCommand extends Command {
       group: "mod",
       memberName: "kick",
       description: "kicks a member from the server",
+      userPermissions: ["KICK_MEMBERS"],
       args: [
         {
             key: 'text', // args.text
